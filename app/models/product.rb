@@ -12,6 +12,8 @@
 #
 class Product < ApplicationRecord
 
+    has_many :shopping_cart_products
+        
     #save
 
     before_create :validate_product
@@ -35,6 +37,10 @@ class Product < ApplicationRecord
 
     def total
         self.price / 100
+    end
+
+    def total_format
+        "$#{self.total}.00 USD"
     end
 
     def discount?

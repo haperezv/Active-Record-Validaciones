@@ -1,0 +1,18 @@
+# == Schema Information
+#
+# Table name: shopping_cart_products
+#
+#  id               :bigint           not null, primary key
+#  shopping_cart_id :bigint           not null
+#  product_id       :bigint           not null
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#
+
+one:
+  shopping_cart: one
+  product: one
+
+two:
+  shopping_cart: two
+  product: two
